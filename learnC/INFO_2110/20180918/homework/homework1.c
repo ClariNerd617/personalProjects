@@ -32,6 +32,9 @@ Part D: (95 pts)
 	
 //libraries
 #include <stdio.h>	//C
+
+// Using the gcc 7.3.0 compiler
+
 void PartA(void)
 {
 	/*	Write a program that asks the user to enter two whole numbers, 
@@ -60,7 +63,7 @@ void PartA(void)
 	printf("The Difference between %i and %i is: %i.\n",a,b,d);
 	printf("The Product of %i and %i is: %i.\n",a,b,p);
 	printf("The Quotient of %i and %i is: %i.\n",a,b,q);
-	printf("The Modulus of %i and %i is: %i.\n",a,b,m);
+	printf("The Modulus of %i and %i is: %i.\n\n",a,b,m);
 }
 
 void PartB(void)
@@ -87,9 +90,9 @@ void PartB(void)
 
     // Display the Results
 
-    printf("The Sum of %i, %i, and %i is %i.",a,b,c,s);
-    printf("The Mean of %i, %i, and %i is %i.",a,b,c,m);
-    printf("The Product of %i, %i, and %i is %i.",a,b,c,p);
+    printf("The Sum of %i, %i, and %i is %i.\n",a,b,c,s);
+    printf("The Mean of %i, %i, and %i is %i.\n",a,b,c,m);
+    printf("The Product of %i, %i, and %i is %i.\n\n",a,b,c,p);
 }
 
 void PartC(void)
