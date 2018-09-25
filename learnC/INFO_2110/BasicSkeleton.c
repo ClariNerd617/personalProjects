@@ -6,7 +6,7 @@
  ***************************************************************************/
  
  //Libraries
- #include "stdafx.h"	//C++ Library
+ //#include "stdafx.h"	//C++ Library
  #include <stdio.h>		//C Library
  
  //Functions
