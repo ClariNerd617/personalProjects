@@ -23,7 +23,7 @@ int main()
     int sum;                //holds the sum of the numbers generated
 	int num;                //entered number from the user
     int triangular_number;  //holds the triangular number
-
+    int ones, tens;         //holds ones and tens place
 
     //initialize variables - assign numbers to the variables
 	sum = 0;                //ALWAYS initialize iterative values at zero unless otherwise specified
@@ -75,6 +75,16 @@ int main()
     printf("\n average = %g\n\n", sum/20.0);
 
 	//output - print the results to the screen
+
+    //print the numbers 1 to 99 using nested for loops
+    for(tens=0;tens<=9;++tens)
+    {
+        for(ones=0;ones<=9;++ones)
+        {
+            printf("%i%i\n",tens,ones);
+        }
+    }
+
     //Print the numbers 1 to 20
 	
     printf("Print the numbers 1 to 20\n");
