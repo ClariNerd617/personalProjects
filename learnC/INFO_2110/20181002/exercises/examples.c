@@ -24,6 +24,7 @@ int main()
 	int num;                //entered number from the user
     int triangular_number;  //holds the triangular number
     int ones, tens;         //holds ones and tens place
+    int factorial;          //holds the factorial
 
     //initialize variables - assign numbers to the variables
 	sum = 0;                //ALWAYS initialize iterative values at zero unless otherwise specified
@@ -76,6 +77,18 @@ int main()
 
 	//output - print the results to the screen
 
+    //factorial
+
+    factorial = 1;
+    printf("Find the factorial of the number:\n");
+    printf("Enter the number:\n");
+    scanf("%i",&num);
+    for(n=1;n<=num;++n)
+    {
+        factorial *= n;
+    }
+    printf("%i Factorial is %i\n",num,factorial);
+    
     //print the numbers 1 to 99 using nested for loops
     for(tens=0;tens<=9;++tens)
     {
