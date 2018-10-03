@@ -19,20 +19,34 @@
 int main()
 {
 	//declare variables - reserve space in memory
-	int n;      //runs the for loops
-    int sum;    //holds the sum of the numbers generated
-	int num;    //entered number from the user
+	int n;                  //runs the for loops
+    int sum;                //holds the sum of the numbers generated
+	int num;                //entered number from the user
+    int triangular_number;  //holds the triangular number
+
 
     //initialize variables - assign numbers to the variables
-	sum = 0;    //ALWAYS initialize iterative values at zero unless otherwise specified
+	sum = 0;                //ALWAYS initialize iterative values at zero unless otherwise specified
+    triangular_number = 0;  //ALWAYS!!!
 
 	//calculation and print
+
+    //Calculate and print the triangular number entered by the user
+    printf("Triangular Number: enter your number please: ");
+    scanf("%i",&num);
+
+    for(n=1;n<=num;++n)
+    {
+        triangular_number = triangular_number + n;
+    }
+    printf("Triangular Number: %i\n\n", triangular_number);
+
 	//Calculate and print the sum of the numbers 1 to 50
 	printf("Calculate and print the sum of the numbers 1 to 50: \n\n");
 	for(n=1;n<=50;++n)
-		{
+	{
 		sum = sum + n;
-		}
+	}
 
 	printf("Sum of all whole numbers between 1 and 50 = %i.\n\n",sum);
     
