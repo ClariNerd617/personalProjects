@@ -12,8 +12,8 @@
 */
 
 //Libraries
-// #include "pch.h"	//2017 C++
-// #include <iostream>	//2017 C++
+//#include "pch.h"    //2017 C++
+//#include <iostream> //2017 C++
 #include <stdio.h>	//C
 
 int main()
