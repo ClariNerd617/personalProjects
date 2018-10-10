@@ -6,7 +6,7 @@ int main()
     int number, right_digit, sum = 0;
     int done = 1;
 
-    while(done != 0)
+    while (done != 0)
     {   
         sum = 0;    //reset the sum
 
@@ -14,7 +14,7 @@ int main()
         printf("Enter your number: ");
         scanf("%i", &number);
 
-        while(number != 0)
+        while (number != 0)
         {
             //Remove each digit one-by-one and add to the sum
             right_digit = number % 10;
