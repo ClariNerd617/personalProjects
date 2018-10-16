@@ -3,48 +3,62 @@
 int main()
 {
     //using switch
-    int choice;
+    int choice, miles, totalMiles;
+    float gallons, mpg, totalGallons, meanMPG;
 
     //print menu
-    printf("    MENU\n");
+    printf("        MENU\n");
     printf("    1   -   Gas Mileage\n");
     printf("    2   -   Sales Comission\n");
-    printf("    3   -   Grade Calculation\n");
-    printf("    4   -   Quit\n");
-
-    //get menu choice
-    printf("Enter your choice: ");
-    scanf("%i",&choice);
-
-    //redirect using switch statment
-    switch (choice)
+    printf("    3   -   Quit\n");
+    do
     {
-        case 1:
-            int miles, gallons, mpg, meanMileage;
+           //get menu choice
+        printf("Enter your choice: ");
+        scanf("%i",&choice);
+        
+        if(choice < 1 || choice > 3)
+            printf("Invalid entry...try again\n");
 
+    }while(choice < 1 || choice > 3);
+
+    switch(choice)
+    {
+        case 1: printf("Gas Mileage\n");
+            totalMiles = 0;
+            totalGallons= 0;
             //input values
-            printf("You chose Gas Mileage");
-            printf("Enter the number of miles you drove: ");
-            scanf("%i",&miles);
+        
             printf("Enter the number of gallons you used: ");
-            scanf("%i",&gallons);
-            printf("The mpg for this tank was: ");
-            scanf("%i",&mpg);
+            scanf("%f",&gallons);
+        
+            while(gallons != -1)
+            {
+                printf("Enter miles: ");
+                scanf("%i", &miles);
 
+                //calculations
+        
+                mpg = miles / gallons;
+                printf("MPG = %.2f\n",mpg);
+                
+                totalMiles = totalMiles + miles;
+                totalGallons = totalGallons + gallons;
+
+                printf("Enter gallons: ");
+                scanf("%f", &gallons);
+            }   
             
+            printf("Overall average miles per gallon was %.2f\n", totalMiles/totalGallons);
+            break;
+
+        case 2: printf("Sales\n");
+            
+            break;
+
+        case 3: printf("Quit\n");
 
             break;
-        case 2:
-            printf("");
-            break;
-        case 3:
-            printf("");
-            break;
-        default:
-            printf("Goodbye, see you next time!\n");
+
     }   //end of switch
-
-
-
-
 }
