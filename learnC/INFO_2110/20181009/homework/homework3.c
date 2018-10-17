@@ -11,6 +11,7 @@ int main()
     printf("    1   -   Gas Mileage\n");
     printf("    2   -   Sales Comission\n");
     printf("    3   -   Quit\n");
+    
     do
     {
            //get menu choice
