@@ -6,7 +6,7 @@
 #include <time.h>
  
 /*Globals*/
-int num1, choice, MAX = 1, MIN = 10;
+int num1, choice, min = 1, max = 10;
  
 void Menu(void)
 {
@@ -29,29 +29,28 @@ int randint(int min, int max)
 void Addition(void)
 {
     printf("Addition\n");
-    printf("%.2f\n",max + min);            printf("Subtraction\n");
-            printf("%.2f\n",value1 - value2);
+    printf("The sum of %i and %i is %i\n\n",max,min,max + min);
 }
 void Subtraction(void)
 {
     printf("Subtraction\n");
-    printf("%.2f\n",max - min);
+    printf("The difference between %i and %i is %i\n\n",max,min,max - min);
 }
 void Multiplication(void)
 {
     printf("Multiplication\n");
-    printF("%.2f\n",max * min);
+    printf("The product of %i and %i is %i\n\n",max,min,max * min);
 }
 void Division(void)
 {
    printf("Division\n");
    if (min != 0)
    {
-       printf("%.2f\n", max / min);
+       printf("The quotient of %i divided by %i is %i with a remainder of %i\n\n",max,min,max / min,max % min);
    }
    else
    {
-       printf("Error: Cannot Divide by Zero.\n");
+       printf("Error: Cannot Divide by Zero.\n\n");
    }
 }
 void Quit(void)
@@ -72,18 +71,19 @@ void Exercises(int c)
 }
 void main(void)
 {   
+    printf("Please enter the minimum value: ");
+    scanf("%i",&min);
+
+    printf("Please enter the maximum value: ");
+    scanf("%i",&max);
+    
     do{
         printf("Welcome to the Math Fact Practice Program\n");
-        printf("Please enter the minimum value: ");
-        scanf("%i",&MIN);
-
-        printf("Please enter the maximum value: ");
-        scanf("%i",&MAX);
-
-    //srand((unsigned)time(NULL));
         Menu();
         printf("Enter your choice: ");
         scanf("%i",&choice);
+
+    //srand((unsigned)time(NULL));
         Exercises(choice);
     }while(choice > 0 && choice < 5);
     printf("Good Bye\n");
