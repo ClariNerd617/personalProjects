@@ -1,4 +1,4 @@
-import requests
+import requests, json
 
 response = requests.get('https://api.weather.gov/gridpoints/GYX/41,12').json()
 
@@ -18,7 +18,7 @@ initial_values = []
 for key in keys:
   initial_values.append(get_value(key))
 
-initial_conditions = dict(zip(keys, initial_values))
+initial_conditions = json.dumps(dict(zip(keys, initial_values)), indent=1)
 
 print(initial_conditions)
 
