@@ -1,16 +1,7 @@
 import requests
 from json import dumps
 
-# def get_loc():
-# TODO: Implement this, should return [lat, lon]
-# using Google's geocode REST API
-# https://developers.google.com/maps/documentation/geocoding/start
-# lat = loc['geometry']['location']['lat']
-# lon = loc['geometry']['location']['lon']
-# response = requests.get(f'https://api.weather.gov/points/{get_loc[0]},{get_loc[1]}').json()
 
-# forecast_url = response['properties']['forecast']
-# response = requests.get(forecast_url).json()
 response = requests.get('https://api.weather.gov/gridpoints/GYX/41,12').json()
 
 
